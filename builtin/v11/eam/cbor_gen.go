@@ -75,7 +75,7 @@ func (t *CreateParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Initcode ([]uint8) (slice)
@@ -176,7 +176,7 @@ func (t *CreateReturn) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 3 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 3", extra)
 	}
 
 	// t.ActorID (uint64) (uint64)
@@ -300,7 +300,7 @@ func (t *Create2Params) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Initcode ([]uint8) (slice)
@@ -410,7 +410,7 @@ func (t *Create2Return) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 3 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 3", extra)
 	}
 
 	// t.ActorID (uint64) (uint64)
@@ -532,7 +532,7 @@ func (t *CreateExternalReturn) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 3 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 3", extra)
 	}
 
 	// t.ActorID (uint64) (uint64)

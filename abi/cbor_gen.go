@@ -67,7 +67,7 @@ func (t *PieceInfo) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Size (abi.PaddedPieceSize) (uint64)
@@ -148,7 +148,7 @@ func (t *SectorID) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Miner (abi.ActorID) (uint64)
@@ -228,7 +228,7 @@ func (t *AddrPairKey) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.First (address.Address) (struct)

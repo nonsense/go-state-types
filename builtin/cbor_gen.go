@@ -78,7 +78,7 @@ func (t *ActorV4) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 4 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 4", extra)
 	}
 
 	// t.Code (cid.Cid) (struct)
@@ -195,7 +195,7 @@ func (t *ActorV5) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 5 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 5", extra)
 	}
 
 	// t.Code (cid.Cid) (struct)

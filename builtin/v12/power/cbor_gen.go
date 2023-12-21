@@ -159,7 +159,7 @@ func (t *State) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 15 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 15", extra)
 	}
 
 	// t.TotalRawBytePower (big.Int) (struct)
@@ -424,7 +424,7 @@ func (t *Claim) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 3 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 3", extra)
 	}
 
 	// t.WindowPoStProofType (abi.RegisteredPoStProof) (int64)
@@ -519,7 +519,7 @@ func (t *UpdateClaimedPowerParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.RawByteDelta (big.Int) (struct)
@@ -649,7 +649,7 @@ func (t *MinerConstructorParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 6 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 6", extra)
 	}
 
 	// t.OwnerAddr (address.Address) (struct)
@@ -899,7 +899,7 @@ func (t *CreateMinerParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 5 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 5", extra)
 	}
 
 	// t.Owner (address.Address) (struct)
@@ -1065,7 +1065,7 @@ func (t *CreateMinerReturn) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.IDAddress (address.Address) (struct)
@@ -1145,7 +1145,7 @@ func (t *CurrentTotalPowerReturn) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 4 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 4", extra)
 	}
 
 	// t.RawBytePower (big.Int) (struct)
@@ -1247,7 +1247,7 @@ func (t *EnrollCronEventParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.EventEpoch (abi.ChainEpoch) (int64)
@@ -1345,7 +1345,7 @@ func (t *MinerRawPowerReturn) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.RawBytePower (big.Int) (struct)
@@ -1431,7 +1431,7 @@ func (t *CronEvent) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.MinerAddr (address.Address) (struct)

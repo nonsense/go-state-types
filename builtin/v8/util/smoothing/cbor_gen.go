@@ -64,7 +64,7 @@ func (t *FilterEstimate) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.PositionEstimate (big.Int) (struct)

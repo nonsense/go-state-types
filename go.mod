@@ -43,3 +43,5 @@ require (
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
 	lukechampine.com/blake3 v1.1.6 // indirect
 )
+
+replace github.com/whyrusleeping/cbor-gen => github.com/nonsense/cbor-gen v0.0.0-20231221123217-f60ec0fa2aea

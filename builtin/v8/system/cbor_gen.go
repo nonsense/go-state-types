@@ -61,7 +61,7 @@ func (t *State) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 1 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 1", extra)
 	}
 
 	// t.BuiltinActors (cid.Cid) (struct)

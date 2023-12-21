@@ -122,7 +122,7 @@ func (t *State) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 7 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 7", extra)
 	}
 
 	// t.Signers ([]address.Address) (slice)
@@ -355,7 +355,7 @@ func (t *Transaction) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 5 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 5", extra)
 	}
 
 	// t.To (address.Address) (struct)
@@ -522,7 +522,7 @@ func (t *ProposalHashData) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 5 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 5", extra)
 	}
 
 	// t.Requester (address.Address) (struct)
@@ -668,7 +668,7 @@ func (t *ConstructorParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 4 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 4", extra)
 	}
 
 	// t.Signers ([]address.Address) (slice)
@@ -841,7 +841,7 @@ func (t *ProposeParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 4 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 4", extra)
 	}
 
 	// t.To (address.Address) (struct)
@@ -976,7 +976,7 @@ func (t *ProposeReturn) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 4 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 4", extra)
 	}
 
 	// t.TxnID (multisig.TxnID) (int64)
@@ -1116,7 +1116,7 @@ func (t *AddSignerParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Signer (address.Address) (struct)
@@ -1194,7 +1194,7 @@ func (t *RemoveSignerParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Signer (address.Address) (struct)
@@ -1286,7 +1286,7 @@ func (t *TxnIDParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.ID (multisig.TxnID) (int64)
@@ -1403,7 +1403,7 @@ func (t *ApproveReturn) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 3 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 3", extra)
 	}
 
 	// t.Applied (bool) (bool)
@@ -1515,7 +1515,7 @@ func (t *ChangeNumApprovalsThresholdParams) UnmarshalCBOR(r io.Reader) (err erro
 	}
 
 	if extra != 1 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 1", extra)
 	}
 
 	// t.NewThreshold (uint64) (uint64)
@@ -1581,7 +1581,7 @@ func (t *SwapSignerParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.From (address.Address) (struct)
@@ -1668,7 +1668,7 @@ func (t *LockBalanceParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 3 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 3", extra)
 	}
 
 	// t.StartEpoch (abi.ChainEpoch) (int64)

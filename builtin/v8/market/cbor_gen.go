@@ -123,7 +123,7 @@ func (t *State) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 11 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 11", extra)
 	}
 
 	// t.Proposals (cid.Cid) (struct)
@@ -336,7 +336,7 @@ func (t *DealState) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 3 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 3", extra)
 	}
 
 	// t.SectorStartEpoch (abi.ChainEpoch) (int64)
@@ -463,7 +463,7 @@ func (t *WithdrawBalanceParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.ProviderOrClientAddress (address.Address) (struct)
@@ -537,7 +537,7 @@ func (t *PublishStorageDealsParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 1 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 1", extra)
 	}
 
 	// t.Deals ([]market.ClientDealProposal) (slice)
@@ -638,7 +638,7 @@ func (t *PublishStorageDealsReturn) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.IDs ([]abi.DealID) (slice)
@@ -759,7 +759,7 @@ func (t *ActivateDealsParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.DealIDs ([]abi.DealID) (slice)
@@ -883,7 +883,7 @@ func (t *VerifyDealsForActivationParams) UnmarshalCBOR(r io.Reader) (err error) 
 	}
 
 	if extra != 1 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 1", extra)
 	}
 
 	// t.Sectors ([]market.SectorDeals) (slice)
@@ -977,7 +977,7 @@ func (t *VerifyDealsForActivationReturn) UnmarshalCBOR(r io.Reader) (err error) 
 	}
 
 	if extra != 1 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 1", extra)
 	}
 
 	// t.Sectors ([]market.SectorWeights) (slice)
@@ -1071,7 +1071,7 @@ func (t *ComputeDataCommitmentParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 1 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 1", extra)
 	}
 
 	// t.Inputs ([]*market.SectorDataSpec) (slice)
@@ -1175,7 +1175,7 @@ func (t *ComputeDataCommitmentReturn) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 1 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 1", extra)
 	}
 
 	// t.CommDs ([]typegen.CborCid) (slice)
@@ -1282,7 +1282,7 @@ func (t *OnMinerSectorsTerminateParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Epoch (abi.ChainEpoch) (int64)
@@ -1461,7 +1461,7 @@ func (t *DealProposal) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 11 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 11", extra)
 	}
 
 	// t.PieceCID (cid.Cid) (struct)
@@ -1660,7 +1660,7 @@ func (t *ClientDealProposal) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Proposal (market.DealProposal) (struct)
@@ -1747,7 +1747,7 @@ func (t *SectorDeals) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.SectorExpiry (abi.ChainEpoch) (int64)
@@ -1873,7 +1873,7 @@ func (t *SectorWeights) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 3 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 3", extra)
 	}
 
 	// t.DealSpace (uint64) (uint64)
@@ -1974,7 +1974,7 @@ func (t *SectorDataSpec) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.DealIDs ([]abi.DealID) (slice)

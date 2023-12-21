@@ -78,7 +78,7 @@ func (t *State) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 4 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 4", extra)
 	}
 
 	// t.RootKey (address.Address) (struct)
@@ -175,7 +175,7 @@ func (t *AddVerifierParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Address (address.Address) (struct)
@@ -245,7 +245,7 @@ func (t *AddVerifiedClientParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Address (address.Address) (struct)
@@ -315,7 +315,7 @@ func (t *UseBytesParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Address (address.Address) (struct)
@@ -385,7 +385,7 @@ func (t *RestoreBytesParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Address (address.Address) (struct)
@@ -465,7 +465,7 @@ func (t *RemoveDataCapParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 4 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 4", extra)
 	}
 
 	// t.VerifiedClientToRemove (address.Address) (struct)
@@ -553,7 +553,7 @@ func (t *RemoveDataCapReturn) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.VerifiedClient (address.Address) (struct)
@@ -623,7 +623,7 @@ func (t *RemoveDataCapRequest) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Verifier (address.Address) (struct)
@@ -700,7 +700,7 @@ func (t *RemoveDataCapProposal) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 3 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 3", extra)
 	}
 
 	// t.VerifiedClient (address.Address) (struct)

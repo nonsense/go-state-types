@@ -100,7 +100,7 @@ func (t *State) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 6 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 6", extra)
 	}
 
 	// t.From (address.Address) (struct)
@@ -243,7 +243,7 @@ func (t *LaneState) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Redeemed (big.Int) (struct)
@@ -318,7 +318,7 @@ func (t *ConstructorParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.From (address.Address) (struct)
@@ -396,7 +396,7 @@ func (t *UpdateChannelStateParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Sv (paych.SignedVoucher) (struct)
@@ -560,7 +560,7 @@ func (t *SignedVoucher) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 11 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 11", extra)
 	}
 
 	// t.ChannelAddr (address.Address) (struct)
@@ -844,7 +844,7 @@ func (t *ModVerifyParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 3 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 3", extra)
 	}
 
 	// t.Actor (address.Address) (struct)
@@ -943,7 +943,7 @@ func (t *Merge) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Lane (uint64) (uint64)

@@ -68,7 +68,7 @@ func (t *Tombstone) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Origin (abi.ActorID) (uint64)
@@ -174,7 +174,7 @@ func (t *State) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 5 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 5", extra)
 	}
 
 	// t.Bytecode (cid.Cid) (struct)
@@ -322,7 +322,7 @@ func (t *ConstructorParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Creator ([20]uint8) (array)
@@ -421,7 +421,7 @@ func (t *GetStorageAtParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 1 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 1", extra)
 	}
 
 	// t.StorageKey ([32]uint8) (array)
@@ -523,7 +523,7 @@ func (t *DelegateCallParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 4 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 4", extra)
 	}
 
 	// t.Code (cid.Cid) (struct)

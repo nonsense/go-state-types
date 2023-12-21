@@ -92,7 +92,7 @@ func (t *State) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 6 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 6", extra)
 	}
 
 	// t.RootKey (address.Address) (struct)
@@ -215,7 +215,7 @@ func (t *AddVerifierParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Address (address.Address) (struct)
@@ -285,7 +285,7 @@ func (t *AddVerifiedClientParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Address (address.Address) (struct)
@@ -355,7 +355,7 @@ func (t *UseBytesParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Address (address.Address) (struct)
@@ -425,7 +425,7 @@ func (t *RestoreBytesParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Address (address.Address) (struct)
@@ -505,7 +505,7 @@ func (t *RemoveDataCapParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 4 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 4", extra)
 	}
 
 	// t.VerifiedClientToRemove (address.Address) (struct)
@@ -593,7 +593,7 @@ func (t *RemoveDataCapReturn) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.VerifiedClient (address.Address) (struct)
@@ -675,7 +675,7 @@ func (t *RemoveExpiredAllocationsParams) UnmarshalCBOR(r io.Reader) (err error) 
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Client (abi.ActorID) (uint64)
@@ -800,7 +800,7 @@ func (t *RemoveExpiredAllocationsReturn) UnmarshalCBOR(r io.Reader) (err error) 
 	}
 
 	if extra != 3 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 3", extra)
 	}
 
 	// t.Considered ([]verifreg.AllocationId) (slice)
@@ -923,7 +923,7 @@ func (t *BatchReturn) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.SuccessCount (uint64) (uint64)
@@ -1036,7 +1036,7 @@ func (t *ClaimAllocationsParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Sectors ([]verifreg.SectorAllocationClaim) (slice)
@@ -1143,7 +1143,7 @@ func (t *ClaimAllocationsReturn) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.BatchInfo (verifreg.BatchReturn) (struct)
@@ -1225,7 +1225,7 @@ func (t *GetClaimsParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Provider (abi.ActorID) (uint64)
@@ -1343,7 +1343,7 @@ func (t *GetClaimsReturn) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.BatchInfo (verifreg.BatchReturn) (struct)
@@ -1451,7 +1451,7 @@ func (t *UniversalReceiverParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Type_ (verifreg.ReceiverType) (uint64)
@@ -1554,7 +1554,7 @@ func (t *AllocationsResponse) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 3 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 3", extra)
 	}
 
 	// t.AllocationResults (verifreg.BatchReturn) (struct)
@@ -1671,7 +1671,7 @@ func (t *ExtendClaimTermsParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 1 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 1", extra)
 	}
 
 	// t.Terms ([]verifreg.ClaimTerm) (slice)
@@ -1771,7 +1771,7 @@ func (t *ExtendClaimTermsReturn) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.SuccessCount (uint64) (uint64)
@@ -1887,7 +1887,7 @@ func (t *RemoveExpiredClaimsParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Provider (abi.ActorID) (uint64)
@@ -2007,7 +2007,7 @@ func (t *RemoveExpiredClaimsReturn) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Considered ([]verifreg.AllocationId) (slice)
@@ -2111,7 +2111,7 @@ func (t *RemoveDataCapRequest) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Verifier (address.Address) (struct)
@@ -2186,7 +2186,7 @@ func (t *RemoveDataCapProposal) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 3 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 3", extra)
 	}
 
 	// t.VerifiedClient (address.Address) (struct)
@@ -2262,7 +2262,7 @@ func (t *RmDcProposalID) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 1 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 1", extra)
 	}
 
 	// t.ProposalID (uint64) (uint64)
@@ -2335,7 +2335,7 @@ func (t *FailCode) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Idx (uint64) (uint64)
@@ -2457,7 +2457,7 @@ func (t *SectorAllocationClaim) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 6 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 6", extra)
 	}
 
 	// t.Client (abi.ActorID) (uint64)
@@ -2656,7 +2656,7 @@ func (t *Claim) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 8 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 8", extra)
 	}
 
 	// t.Provider (abi.ActorID) (uint64)
@@ -2864,7 +2864,7 @@ func (t *ClaimTerm) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 3 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 3", extra)
 	}
 
 	// t.Provider (abi.ActorID) (uint64)
@@ -2981,7 +2981,7 @@ func (t *ClaimExtensionRequest) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 3 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 3", extra)
 	}
 
 	// t.Provider (address.Address) (struct)
@@ -3128,7 +3128,7 @@ func (t *Allocation) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 7 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 7", extra)
 	}
 
 	// t.Client (abi.ActorID) (uint64)
@@ -3350,7 +3350,7 @@ func (t *AllocationRequest) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 6 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 6", extra)
 	}
 
 	// t.Provider (abi.ActorID) (uint64)
@@ -3535,7 +3535,7 @@ func (t *AllocationRequests) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.Allocations ([]verifreg.AllocationRequest) (slice)

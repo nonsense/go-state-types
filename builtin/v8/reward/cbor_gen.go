@@ -122,7 +122,7 @@ func (t *State) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 11 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 11", extra)
 	}
 
 	// t.CumsumBaseline (big.Int) (struct)
@@ -305,7 +305,7 @@ func (t *ThisEpochRewardReturn) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 2 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 2", extra)
 	}
 
 	// t.ThisEpochRewardSmoothed (smoothing.FilterEstimate) (struct)
@@ -391,7 +391,7 @@ func (t *AwardBlockRewardParams) UnmarshalCBOR(r io.Reader) (err error) {
 	}
 
 	if extra != 4 {
-		return fmt.Errorf("cbor input had wrong number of fields")
+		return fmt.Errorf("cbor input had wrong number of fields, got %d, expected 4", extra)
 	}
 
 	// t.Miner (address.Address) (struct)
